@@ -31,7 +31,6 @@ export class AuthService {
         access_token: await this.jwtService.signAsync(payload),
       };
     } catch (error) {
-      console.log('EEERRRORRR', error);
       if (error?.code?.includes('ER_DUP_ENTRY')) {
         throw new HttpException(
           'User with that email already exists',
