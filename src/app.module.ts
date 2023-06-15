@@ -6,6 +6,7 @@ import { UsersModule } from './users/users.module';
 import { SyncModule } from './sync/sync.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { NotesModule } from './notes/notes.module';
+import { TransmitterModule } from './transmitter/transmitter.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { NotesModule } from './notes/notes.module';
     UsersModule,
     NotesModule,
     SyncModule,
+    TransmitterModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: '0.0.0.0',
