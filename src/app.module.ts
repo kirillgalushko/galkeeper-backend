@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { SyncModule } from './sync/sync.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { NotesModule } from './notes/notes.module';
 
@@ -11,6 +12,7 @@ import { NotesModule } from './notes/notes.module';
     AuthModule,
     UsersModule,
     NotesModule,
+    SyncModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: '0.0.0.0',

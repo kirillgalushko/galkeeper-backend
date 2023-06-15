@@ -26,10 +26,4 @@ export class NotesController {
   bulk(@Request() req: any): Promise<Note[]> {
     return this.notesService.findAllByOwner(req.user.sub);
   }
-
-  // TODO:
-  @Delete(':id')
-  remove(@Param('id') id: string): Promise<void> {
-    return this.notesService.remove(id);
-  }
 }

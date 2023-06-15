@@ -15,6 +15,12 @@ export class Note {
   @Column({ nullable: true })
   public password?: string;
 
+  @Column({ type: 'timestamp' })
+  public updatedAt: Date;
+
+  @Column()
+  public isDeleted: boolean;
+
   @ManyToOne(() => User, (user) => user.notes)
   owner: User;
 }
