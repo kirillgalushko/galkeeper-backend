@@ -6,13 +6,13 @@ export class Note {
   @PrimaryGeneratedColumn()
   public id?: number;
 
-  @Column({ nullable: true })
+  @Column({ type: 'longtext', nullable: true })
   public name?: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'longtext', nullable: true })
   public login?: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'longtext', nullable: true })
   public password?: string;
 
   @Column({ type: 'timestamp' })

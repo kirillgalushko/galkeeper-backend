@@ -40,13 +40,13 @@ export class TransmitterGateway {
       const userId = await getUserIdFromClient(client, this.jwtService);
       const userClients = this.wsClients.get(userId);
       this.wsClients.set(userId, [...(userClients || []), client]);
-      console.log(userClients);
     } catch (e) {
       client.disconnect();
     }
   }
 
   async handleDisconnect(client: Socket) {
+    // TODO: Remove from map
     console.log('Disconnect', client.id);
   }
 
