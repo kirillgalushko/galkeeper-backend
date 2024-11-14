@@ -1,10 +1,9 @@
 {
-  "name": "passwords-backend",
+  "name": "galkeeper-backend",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Kirill Galushko",
   "private": true,
-  "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
